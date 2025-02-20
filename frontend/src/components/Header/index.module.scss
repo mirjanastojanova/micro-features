@@ -1,0 +1,67 @@
+.header {
+    height: 100px;
+    background: #355C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: 1px solid rgb(179, 176, 176);
+    color: white;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding-left: 50px;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    padding-right: 50px;
+    font-weight: 400;
+}
+
+.dropdown {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid rgb(179, 176, 176);
+    background: #1D976C;
+    background: #355C7D;
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+}
+
+.listWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 50px 0;
+    gap: 20px;
+}
+
+.mainServices {
+    font-size: 26px;
+    padding-right: 50px;
+    border-right: 1px solid #a5a2a2;
+}
+
+.additionalServices {
+    font-size: 18px;
+
+}
