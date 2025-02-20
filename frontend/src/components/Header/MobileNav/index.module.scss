@@ -1,0 +1,85 @@
+.header {
+  height: 100px;
+  background: #355c7d;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom: 1px solid rgb(179, 176, 176);
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+  top: 0;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  padding-right: 50px;
+  font-weight: 400;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: #1d976c;
+  background: #355c7d;
+  background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+}
+
+.dropdown {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-bottom: 1px solid rgb(179, 176, 176);
+  background: #1d976c;
+  background: #355c7d;
+  background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+}
+
+.listWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  padding: 50px 0;
+  gap: 20px;
+}
+
+.mainServices {
+  font-size: 26px;
+  padding-right: 50px;
+  border-right: 1px solid #a5a2a2;
+}
+
+.additionalServices {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
