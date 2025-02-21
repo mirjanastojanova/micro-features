@@ -24,8 +24,7 @@ export default function DesktopNav() {
             <Link href="/home">Home</Link>
           </li>
           <li>
-            <Link
-              href="/services"
+            <button
               onMouseEnter={() => toggleDropdown("services")}
               onMouseLeave={() => setDropdown(null)}
               className="flex items-center"
@@ -45,7 +44,7 @@ export default function DesktopNav() {
                   />
                 </svg>
               </span>
-            </Link>
+            </button>
           </li>
           <li>
             <Link href="/about">About</Link>

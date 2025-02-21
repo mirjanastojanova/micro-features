@@ -1,11 +1,8 @@
 .header {
   height: 100px;
   background: #355c7d;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-bottom: 1px solid rgb(179, 176, 176);
   color: white;
 }
@@ -63,4 +60,15 @@
 
 .additionalServices {
   font-size: 18px;
+}
+
+@media screen and (min-width: 765px) and (max-width: 1024px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navList {
+    width: 60%;
+  }
 }

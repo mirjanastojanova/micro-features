@@ -58,29 +58,28 @@ export default function MobileNav() {
               <Link href="/home">Home</Link>
             </li>
             <li>
-              <Link
-                href="/services"
-                onMouseEnter={() => toggleDropdown("services")}
-                onMouseLeave={() => setDropdown(null)}
-                className="flex items-center"
+              <button
+                onClick={() => toggleDropdown("services")}
+                className="flex items-center gap-1 transition-all duration-300"
               >
                 Services
-                <span>
+                <span className="transform transition-transform duration-300 group-hover:rotate-90">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="ml-2 size-6"
+                    className="w-5 h-5 mt-1"
                   >
                     <path
                       fillRule="evenodd"
-                      d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                      d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                       clipRule="evenodd"
                     />
                   </svg>
                 </span>
-              </Link>
+              </button>
             </li>
+
             <li>
               <Link href="/about">About</Link>
             </li>
@@ -95,6 +94,20 @@ export default function MobileNav() {
       </nav>
       {open && showDropdown === "services" && (
         <div className={styles.dropdown}>
+          <div className={styles.back} onClick={() => setDropdown(null)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="size-6"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
           <div className={styles.listWrapper}>
             <ul className={styles.mainServices}>
               <span className="text-[12px]">Main services</span>
