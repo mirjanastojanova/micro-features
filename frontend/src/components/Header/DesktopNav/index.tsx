@@ -7,10 +7,19 @@ import Image from "next/image";
 import img from "../../../../public/logo.png";
 
 export default function DesktopNav() {
-  const [showDropdown, setDropdown] = useState<string | null>(null);
+  const [showDropdown, setDropdown] = useState<{
+    category: string | null;
+    open: boolean;
+  }>({
+    category: null,
+    open: false,
+  });
 
-  const toggleDropdown = (linkName: string) => {
-    setDropdown(linkName);
+  const toggleDropdown = (category: string) => {
+    setDropdown((prev) => ({
+      category: prev.category === category && prev.open ? null : category,
+      open: prev.category === category && prev.open ? false : true,
+    }));
   };
 
   return (
@@ -25,8 +34,8 @@ export default function DesktopNav() {
           </li>
           <li>
             <button
-              onMouseEnter={() => toggleDropdown("services")}
-              onMouseLeave={() => setDropdown(null)}
+              onClick={() => toggleDropdown("services")}
+              onMouseDown={(e) => e.stopPropagation()}
               className="flex items-center"
               id={styles.btnDd}
             >
@@ -58,7 +67,7 @@ export default function DesktopNav() {
           </li>
         </ul>
       </nav>
-      {showDropdown === "services" && (
+      {showDropdown.category === "services" && showDropdown.open && (
         <div className={styles.dropdown}>
           <div className={styles.listWrapper}>
             <ul className={styles.mainServices}>
