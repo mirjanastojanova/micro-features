@@ -31,6 +31,11 @@
   font-weight: 400;
 }
 
+#btnDd:hover {
+  animation: moveInBottom 0.5s forwards;
+}
+
+
 .dropdown {
   height: auto;
   width: 100%;
@@ -40,6 +45,7 @@
   background: #355c7d;
   background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
   background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
+  animation: moveTopBottom 0.4s ease-out;
 }
 
 .listWrapper {
@@ -70,5 +76,29 @@
 
   .navList {
     width: 60%;
+  }
+}
+
+@keyframes moveTopBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
   }
 }
